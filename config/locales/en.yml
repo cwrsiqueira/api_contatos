@@ -29,3 +29,4 @@
 
 en:
   hello: "Hello world"
+  Password is too short (minimum is 6 characters): "Senha muito curta (minimo de 6 caracteres)"

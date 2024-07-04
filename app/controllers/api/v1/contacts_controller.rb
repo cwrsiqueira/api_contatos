@@ -1,3 +1,4 @@
+# Controler da api/v1 (versao 1)
 class Api::V1::ContactsController < ApplicationController
   before_action :authenticate_api_user!
   before_action :set_contact, only: %i[ show update destroy ]

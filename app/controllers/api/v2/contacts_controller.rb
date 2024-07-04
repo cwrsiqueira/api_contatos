@@ -1,10 +1,11 @@
+# Controler da versao padrao atual da API
 class Api::V2::ContactsController < ApplicationController
   before_action :authenticate_api_user!
   before_action :set_contact, only: %i[ show update destroy ]
 
   # GET /contacts
   def index
-    @contacts = current_api_user.contacts.all
+    @contacts = current_api_user.contacts.sorted(:name, :asc)
 
     render json: @contacts
   end
